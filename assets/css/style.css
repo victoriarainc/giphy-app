@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url(../images/pinkdust.png);
+	background-attachment: relative;
+	background-position: center;
+	background-repeat: repeat;
+}
+
+#topicButtons {
+	padding: 10px;
+	margin: 10px;
+}
+
+.gifImg {
+	padding: 30px;
+	border-radius: 15px;
+	background-color: pink;
+	border: 3px solid #fff;
+}
+
+.ratingInfo {
+	font-size: 20px;
+	color: #fff;
+}
