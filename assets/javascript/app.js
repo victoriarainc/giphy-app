@@ -25,20 +25,20 @@ $(document).ready(function() {
 		}).done(function(cheese){
 
 			console.log(cheese);
-			console.log(cheese.data[0].images.fixed_width_still.url);
+			console.log(cheese.data[0].images.fixed_height_still.url);
 			
-			for (var i = 0; i < 10; i++) {
-				// var imgRatingDiv = $("<div>");
-				
-				// $("<div>").addClass("imgRating");
+			for (var i = 0; i < 10; i++) {				
+				var imgRatingDiv = $("<div>").addClass("imgRating col-md-4");
 				var imgTag = $("<img>");
 
-				imgTag.addClass("gifImg col-md-3").attr("src", cheese.data[i].images.fixed_width_still.url).
+				$("<p>").text("Rating: " + cheese.data[i].rating).addClass("ratingInfo").appendTo(imgRatingDiv);
+
+				imgTag.addClass("gifImg").attr("src", cheese.data[i].images.fixed_width_still.url).
 				attr("data-state", "still").attr("data-stillURL", cheese.data[i].images.fixed_width_still.url)
 				.attr("data-animURL", cheese.data[i].images.fixed_width.url)
-				.appendTo("#gifsDiv");
-				$("<p>").text("Rating: " + cheese.data[i].rating).addClass("ratingInfo").appendTo("#gifsDiv");
-				// imgRatingDiv.appendTo("#gifsDiv");
+				.appendTo(imgRatingDiv);
+
+				imgRatingDiv.appendTo("#gifsDiv");
 			}
 		})
 	})
@@ -87,14 +87,20 @@ function addANewSearchBtn() {
 		}).done(function(cheese){
 
 			console.log(cheese);
-			console.log(cheese.data[0].images.fixed_width_still.url);
+			console.log(cheese.data[0].images.fixed_height_still.url);
 			
-			for (var i = 0; i < 10; i++) {
-				$("<img>").addClass("gifImg col-md-3").attr("src", cheese.data[i].images.fixed_width_still.url).
+			for (var i = 0; i < 10; i++) {				
+				var imgRatingDiv = $("<div>").addClass("imgRating col-md-4");
+				var imgTag = $("<img>");
+
+				$("<p>").text("Rating: " + cheese.data[i].rating).addClass("ratingInfo").appendTo(imgRatingDiv);
+
+				imgTag.addClass("gifImg").attr("src", cheese.data[i].images.fixed_width_still.url).
 				attr("data-state", "still").attr("data-stillURL", cheese.data[i].images.fixed_width_still.url)
 				.attr("data-animURL", cheese.data[i].images.fixed_width.url)
-				.appendTo("#gifsDiv");
-				$("<p>").text("Rating: " + cheese.data[i].rating).addClass("ratingInfo").appendTo("#gifsDiv");
+				.appendTo(imgRatingDiv);
+
+				imgRatingDiv.appendTo("#gifsDiv");
 			}
 		})
 	})
