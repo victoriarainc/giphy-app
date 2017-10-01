@@ -1,15 +1,9 @@
-// var topics = ["Will Smith", "Maxine Waters", "Penny Dreadful", "Vanessa Ives", "Garnet", "Rose Quartz",
-// 	"Steven Universe", "Leonard Nimoy"]
-
-// var topics = ["despair", "bored", "sigh", "excited", "hangry", "sleepy", "coffee", "confused", 
-// 	"terrified", "cabbage", "pizza", "sob", "cat", "ugh"]
-
 var topics = ["cabbage", "pizza", "tacos", "beer", "whiskey", "coffee", "ice cream", "peanut butter",
 	"sushi", "honey", "leaves", "nuts", "vodka", "wine", "cake", "hot dog"]
 
 $(document).ready(function() {
 	for (var i = 0; i < topics.length; i++) {
-		$("<button>").text(topics[i]).attr("data-value", topics[i]).addClass("buttonStyle").appendTo("#topicButtons");
+		$("<button>").text(topics[i]).attr("data-value", topics[i]).addClass("buttonStyle btn btn-lg").appendTo("#topicButtons");
 	}
 
 	$(".buttonStyle").on("click", function() {
@@ -28,7 +22,7 @@ $(document).ready(function() {
 			console.log(cheese.data[0].images.fixed_height_still.url);
 			
 			for (var i = 0; i < 10; i++) {				
-				var imgRatingDiv = $("<div>").addClass("imgRating col-md-4");
+				var imgRatingDiv = $("<div>").addClass("imgRating col-md-6");
 				var imgTag = $("<img>");
 
 				$("<p>").text("Rating: " + cheese.data[i].rating).addClass("ratingInfo").appendTo(imgRatingDiv);
@@ -90,7 +84,7 @@ function addANewSearchBtn() {
 			console.log(cheese.data[0].images.fixed_height_still.url);
 			
 			for (var i = 0; i < 10; i++) {				
-				var imgRatingDiv = $("<div>").addClass("imgRating col-md-4");
+				var imgRatingDiv = $("<div>").addClass("imgRating col-md-6");
 				var imgTag = $("<img>");
 
 				$("<p>").text("Rating: " + cheese.data[i].rating).addClass("ratingInfo").appendTo(imgRatingDiv);

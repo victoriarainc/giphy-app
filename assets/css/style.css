@@ -13,9 +13,26 @@ body {
 	background-repeat: repeat;
 }
 
+#container {
+	margin-bottom: -100px;
+}
+
+#foot {
+	height: 100px;
+	background-color: #b0b0b0;
+	color: #fff;
+	text-align: center;
+}
+
 #topicButtons {
 	padding: 10px;
 	margin: 10px;
+}
+
+button.buttonStyle, button#gifBtnText {
+	margin: 5px;
+	background-color: rgba(255, 151, 151, 0.56);
+	border: 1px solid #444;
 }
 
 .gifImg {
