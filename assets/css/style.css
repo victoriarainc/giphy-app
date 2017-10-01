@@ -19,9 +19,24 @@ body {
 
 #foot {
 	height: 100px;
-	background-color: #b0b0b0;
+	background-color: rgba(230, 206, 224, 0.45);
 	color: #fff;
 	text-align: center;
+	padding: 40px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin-top: 15%;
+}
+
+footer#foot::before {
+	content: none;
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#gifsDiv {
+	height: 80vh;
 }
 
 #topicButtons {
@@ -40,6 +55,8 @@ button.buttonStyle, button#gifBtnText {
 	border-radius: 15px;
 	background-color: pink;
 	border: 3px solid #fff;
+	margin: 10px;
+	height: 230px;
 }
 
 .ratingInfo {
