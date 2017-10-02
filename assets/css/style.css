@@ -11,10 +11,26 @@ body {
 	background-attachment: relative;
 	background-position: center;
 	background-repeat: repeat;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 #container {
 	margin-bottom: -100px;
+	flex: 1;
+}
+
+#gifsDiv {
+	min-height: 85vh;
+	flex-flow: row wrap;
+	justify-content: space-around; 
+	/* Added to the parent element for flex div, removed col-md-6 from div in js */
+}
+
+.imgRatingDiv {
+	flex-grow: 1;
+	margin: auto;
 }
 
 #foot {
@@ -25,7 +41,7 @@ body {
 	padding: 40px;
 	font-size: 16px;
 	letter-spacing: 1px;
-	margin-top: 15%;
+	margin-top: 30px;
 }
 
 footer#foot::before {
@@ -35,19 +51,28 @@ footer#foot::before {
 	clear: both;
 }
 
-#gifsDiv {
-	height: 80vh;
-}
-
 #topicButtons {
 	padding: 10px;
 	margin: 10px;
 }
 
 button.buttonStyle, button#gifBtnText {
-	margin: 5px;
+	margin-right: 15px;
+	margin-bottom: 10px;
 	background-color: rgba(255, 151, 151, 0.56);
-	border: 1px solid #444;
+	border-color: rgb(208, 122, 122);
+}
+
+button.buttonStyle:hover, button#gifBtnText:hover {
+	background-color: rgb(212, 177, 177);
+	transition: all 0.5s;
+}
+
+button.buttonStyle:active, button#gifBtnText:active {
+	background-color: rgb(189, 60, 60);
+}
+#newTextBtn {
+	margin-top: 1px;
 }
 
 .gifImg {
