@@ -93,4 +93,5 @@ button.buttonStyle:active, button#gifBtnText:active {
 .ratingInfo {
 	font-size: 20px;
 	color: #fff;
+	margin-left: 10px;
 }
