@@ -19,18 +19,19 @@ body {
 #container {
 	margin-bottom: -100px;
 	flex: 1;
+	width: 90%;
 }
 
 #gifsDiv {
 	min-height: 85vh;
-	flex-flow: row wrap;
-	justify-content: space-around; 
-	/* Added to the parent element for flex div, removed col-md-6 from div in js */
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .imgRatingDiv {
-	flex-grow: 1;
 	margin: auto;
+	flex: 1;
 }
 
 #foot {
@@ -71,8 +72,13 @@ button.buttonStyle:hover, button#gifBtnText:hover {
 button.buttonStyle:active, button#gifBtnText:active {
 	background-color: rgb(189, 60, 60);
 }
+
 #newTextBtn {
 	margin-top: 1px;
+}
+
+#addAGif {
+	margin-top: 30px;
 }
 
 .gifImg {
