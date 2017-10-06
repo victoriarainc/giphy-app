@@ -25,7 +25,7 @@ function clickedAButton() {
 			url: queryURL,
 			method: "GET"
 		}).done(function(cheese){
-			
+			console.log(cheese);
 			for (var i = 0; i < 10; i++) {				
 				var imgRatingDiv = $("<div>").addClass("imgRating");
 				var imgTag = $("<img>");
