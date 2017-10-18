@@ -1,8 +1,11 @@
+/*=========== GLOBAL =============*/
+
 html, body {
 	height: 100%;
 }
 
 body {
+	color: white;
 	background-image: url(../images/pinkdust.png);
 	background-attachment: relative;
 	background-position: center;
@@ -53,6 +56,7 @@ footer#foot::before {
 	padding: 10px;
 	margin: 10px;
 	border-radius: none;
+	background-color: black;
 }
 
 button.buttonStyle, button#gifBtnText {
