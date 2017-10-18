@@ -58,6 +58,8 @@ footer#foot::before {
 	border-radius: none;
 	background-color: black;
 	border: none;
+	height: 40px;
+	width: 12%;
 }
 
 button.buttonStyle, button#gifBtnText {
