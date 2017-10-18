@@ -4,11 +4,11 @@ var topics = ["cabbage", "pizza", "tacos", "beer", "whiskey", "coffee", "ice cre
 // initial function to populate the DOM with buttons from topics array, pull relevant gifs from giphy
 $(document).ready(function() {
 	for (var i = 0; i < topics.length; i++) {
-		$("<button>").text(topics[i]).attr("data-value", topics[i]).addClass("buttonStyle btn btn-lg").appendTo("#topicButtons");
+		$("<button>").text(topics[i]).attr("data-value", topics[i]).addClass("topicButtons").appendTo("#topicButtons");
 	}
 })
 
-$(document).on("click", ".buttonStyle", clickedAButton);
+$(document).on("click", ".topicButtons", clickedAButton);
 
 $(document).on("click", ".gifImg", doSomethingWithGif);
 
@@ -17,8 +17,8 @@ $(document).on("click", "#gifBtnText", addANewSearchBtn);
 function clickedAButton() {
 	$("#gifsDiv").empty();
 
-		var choice = $(this).attr("data-value"); 
-		var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=" 
+		var choice = $(this).attr("data-value");
+		var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q="
 			+ choice + "&limit=10";
 
 		$.ajax({
@@ -26,7 +26,7 @@ function clickedAButton() {
 			method: "GET"
 		}).done(function(cheese){
 			console.log(cheese);
-			for (var i = 0; i < 10; i++) {				
+			for (var i = 0; i < 10; i++) {
 				var imgRatingDiv = $("<div>").addClass("imgRating");
 				var imgTag = $("<img>");
 
@@ -59,7 +59,7 @@ function doSomethingWithGif() {
 	}
 }
 
-// pushes new words to topics, renders it to the DOM 
+// pushes new words to topics, renders it to the DOM
 function addANewSearchBtn() {
 	event.preventDefault();
 	topics.push($("#newTextBtn").val());
