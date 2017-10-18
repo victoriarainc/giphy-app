@@ -57,6 +57,7 @@ footer#foot::before {
 	margin: 10px;
 	border-radius: none;
 	background-color: black;
+	border: none;
 }
 
 button.buttonStyle, button#gifBtnText {
